@@ -1,63 +1,81 @@
 <!DOCTYPE html>
-<html lang="th">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile Website</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>เว็บไซต์ของฉัน</title>
+
+<style>
+body{
+    background-color: #e6f2ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1{
+    color: darkblue;
+}
+
+img{
+    width: 300px;
+}
+
+ul{
+    display: inline-block;
+    text-align: left;
+}
+</style>
+
+<script>
+
+function showWelcome(){
+    document.getElementById("welcome").innerHTML =
+    "ยินดีต้อนรับสู่เว็บไซต์ของฉัน";
+}
+
+function greetUser(){
+    var name = document.getElementById("username").value;
+    document.getElementById("result").innerHTML =
+    "สวัสดี " + name + " ยินดีต้อนรับ";
+}
+
+</script>
+
 </head>
 
 <body>
 
-    <!-- ส่วนหัว -->
-    <header>
-        <h1>My Profile Website</h1>
-        <p>เว็บไซต์แนะนำตัวนักศึกษา</p>
-    </header>
+<h1>เว็บไซต์แนะนำสถานที่ท่องเที่ยวในจังหวัดนครราชสีมา</h1>
 
-    <!-- โปรไฟล์ -->
-    <section class="profile">
-        <img src="รูป.jpg" alt="profile picture">
+<img src="primo-piazza-khao-yai.jpg""อุทยานแห่งชาติทับลาน.jpg""น้ำตกเหวนรก.jpg>
 
-        <h2>นางสาว ณัฐนันท์ ล่ำสันต์</h2>
-        <p>สาขาเทคโนโลยีดิจิทัลมีเดีย</p>
-    </section>
+<p>
+เว็บไซต์นี้จัดทำขึ้นเพื่อแนะนำสถานที่ท่องเที่ยวที่น่าสนใจ
+</p>
 
-    <!-- ประวัติ -->
-    <section class="card">
-        <h2>ประวัติการศึกษา</h2>
-        <ul>
-            <li>ประถมศึกษา : โรงเรียนบ้านห้วยแคน</li>
-            <li>มัธยมศึกษา : โรงเรียนห้วยแถลงพิทยาคม</li>
-            <li>ปัจจุบัน : มหาวิทยาลัยราชภัฎนครราชสีมา</li>
-        </ul>
-    </section>
+<h3>สถานที่ท่องเที่ยวแนะนำ</h3>
+<ul>
+   <li>Primo Piazza</li>
+   <li>อุทยานแห่งชาติทับลาน</li>
+   <li>น้ำตกเหวนรก</li>
+</ul>
 
-    <!-- ทักษะ -->
-    <section class="card">
-        <h2>ทักษะความสามารถ</h2>
-        <ul>
-            <li>การออกแบบกราฟิก (Photoshop / Canva)</li>
-            <li>การถ่ายภาพ</li>
-            <li>ตัดต่อวิดีโอ</li>
-            <li>เล่นกีฬา</li>
-        </ul>
-    </section>
+<p>
+<a href="https://www2.nakhonratchasima.go.th/travel_top" target="_blank">
+ไปยังเว็บไซต์แนะนำสถานที่ท่องเที่ยวเพิ่มเติม
+</a>
+</p>
 
-    <!-- ติดต่อ -->
-    <section class="card">
-        <h2>ช่องทางติดต่อ</h2>
-        <p>Email: 6840215102@nrru.ac.th</p>
-        <p>Facebook: fb.Nathanan</p>
-        <p>Instagram: @pat_xi07</p>
-    </section>
+<hr>
 
-    <!-- ส่วนท้าย -->
-    <footer>
-        <p>© 2026 My Profile Website</p>
-    </footer>
+<button onclick="showWelcome()">ลองคลิกที่นี่ดูสิ</button>
+<p id="welcome"></p>
+
+<br>
+
+<input type="text" id="username" placeholder="กรอกชื่อของคุณ">
+<button onclick="greetUser()">ทักทาย</button>
+
+<p id="result"></p>
 
 </body>
 </html>
-
-
